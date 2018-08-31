@@ -31,6 +31,8 @@ RUN apt-get update \
     r-cran-reshape2 \
     r-cran-testthat \
     r-cran-tibble \
+    # git2r is needed for remotes
+    r-cran-git2r \
     # it seems spark won't work with Java 10 yet
     openjdk-8-jdk-headless \
   && apt-get clean \
