@@ -41,7 +41,7 @@ RUN apt-get update \
 # remotes is needed inside installGithub.r
 RUN install2.r --error --deps TRUE remotes
 
-RUN installGithub.r --error rstudio/sparklyr
+RUN installGithub.r --deps TRUE rstudio/sparklyr
 
 # install scala 2.10 and 2.11, which is currently specified in spark_default_compilation_spec()
 RUN mkdir /usr/local/scala/ \
